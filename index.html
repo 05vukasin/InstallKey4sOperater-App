@@ -2,43 +2,105 @@
 <html lang="sr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Preuzmi Ažuriranu Verziju</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Key4S Ažuriranje</title>
+  <link rel="icon" type="image/png" href="logo.png" />
   <style>
-    body {
-      font-family: sans-serif;
-      background-color: #1c2e4a;
-      color: #fff;
-      text-align: center;
-      padding: 50px 20px;
+    :root {
+      --bg: #0f172a;
+      --panel: #1e293b;
+      --blue: #3b82f6;
+      --gray: #cbd5e1;
+      --white: #ffffff;
     }
-    h1 {
-      font-size: 28px;
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--gray);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: var(--panel);
+      border-radius: 16px;
+      padding: 40px 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      animation: fadeIn 0.8s ease;
+    }
+
+    .logo {
+      width: 280px;
+      height: 80px;
       margin-bottom: 20px;
     }
-    a.download-btn {
+
+    h1 {
+      font-size: 24px;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      color: var(--gray);
+      margin-bottom: 30px;
+    }
+
+    .download-btn {
       display: inline-block;
-      background-color: #f39c12;
-      color: #fff;
+      background-color: var(--blue);
+      color: var(--white);
       padding: 14px 28px;
       border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
       text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
+      transition: background-color 0.3s ease;
     }
-    a.download-btn:hover {
-      background-color: #e67e22;
+
+    .download-btn:hover {
+      background-color: #2563eb;
     }
+
     .version {
       margin-top: 20px;
       font-size: 14px;
-      opacity: 0.8;
+      color: #94a3b8;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Dostupna je nova verzija aplikacije</h1>
-  <a class="download-btn" href="/apk/Key4SOperater-v1.2.0.apk" download>Preuzmi ažuriranu aplikaciju</a>
-  <div class="version">Verzija: 1.2.0</div>
+  <div class="container">
+    <img src="logo.png" alt="Key4S Logo" class="logo" />
+    <h1>Nova verzija dostupna</h1>
+    <p>Preuzmite najnoviju verziju aplikacije i ostanite ažurni.</p>
+    <a class="download-btn" href="key4s.apk" download>Preuzmi Key4S</a>
+    <div class="version">Verzija: 1.2.0</div>
+  </div>
 </body>
 </html>
